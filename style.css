@@ -1,8 +1,18 @@
 body {
   min-height: max(884px, 100dvh);
+  position: relative;
 }
 
-.background-image {
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image: linear-gradient(0deg, rgba(34, 16, 18, 0.7) 0%, rgba(34, 16, 18, 0.4) 50%, rgba(34, 16, 18, 0.7) 100%), url(background.jpg);
+  background-size: cover;
+  background-position: center;
+
   filter: blur(4px);
   transform: scale(1.1);
 }
